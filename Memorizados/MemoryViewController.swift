@@ -17,6 +17,10 @@ class MemoryViewController: UIViewController {
         didSet {
             if let memoryItem = memoryItem {
                 textView.text = memoryItem.title + "\n" + memoryItem.text
+                let titleText = NSMutableAttributedString(string: memoryItem.title + "\n", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .bold)])
+                let descriptionText = NSAttributedString(string: memoryItem.text, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .regular)])
+                titleText.append(descriptionText)
+                textView.attributedText = titleText
             }
         }
     }

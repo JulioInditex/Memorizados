@@ -44,6 +44,10 @@ class ViewController: UIViewController {
 // MARK: UITableViewDelegate
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = memoryItems[indexPath.row]
+        let viewController = MemoryViewController()
+        viewController.saveItem(memoryItem: item)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
