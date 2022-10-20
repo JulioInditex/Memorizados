@@ -13,6 +13,8 @@
 		44C7E55029012BB8008DC467 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44C7E54E29012BB8008DC467 /* Main.storyboard */; };
 		44C7E55229012BB9008DC467 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44C7E55129012BB9008DC467 /* Assets.xcassets */; };
 		44C7E55529012BB9008DC467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44C7E55329012BB9008DC467 /* LaunchScreen.storyboard */; };
+		44C7E55E29012D9C008DC467 /* MemoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C7E55D29012D9C008DC467 /* MemoryItem.swift */; };
+		44C7E56129012EBF008DC467 /* MemoryItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 44C7E56029012EBF008DC467 /* MemoryItems.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		44C7E55129012BB9008DC467 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44C7E55429012BB9008DC467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44C7E55629012BB9008DC467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44C7E55D29012D9C008DC467 /* MemoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryItem.swift; sourceTree = "<group>"; };
+		44C7E56029012EBF008DC467 /* MemoryItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MemoryItems.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		44C7E54729012BB8008DC467 /* Memorizados */ = {
 			isa = PBXGroup;
 			children = (
+				44C7E55F29012EA9008DC467 /* Json */,
+				44C7E55C29012D92008DC467 /* Model */,
 				44C7E54829012BB8008DC467 /* AppDelegate.swift */,
 				44C7E54A29012BB8008DC467 /* SceneDelegate.swift */,
 				44C7E54C29012BB8008DC467 /* ViewController.swift */,
@@ -65,6 +71,22 @@
 				44C7E55629012BB9008DC467 /* Info.plist */,
 			);
 			path = Memorizados;
+			sourceTree = "<group>";
+		};
+		44C7E55C29012D92008DC467 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44C7E55D29012D9C008DC467 /* MemoryItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44C7E55F29012EA9008DC467 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				44C7E56029012EBF008DC467 /* MemoryItems.json */,
+			);
+			path = Json;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +150,7 @@
 				44C7E55529012BB9008DC467 /* LaunchScreen.storyboard in Resources */,
 				44C7E55229012BB9008DC467 /* Assets.xcassets in Resources */,
 				44C7E55029012BB8008DC467 /* Main.storyboard in Resources */,
+				44C7E56129012EBF008DC467 /* MemoryItems.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +164,7 @@
 				44C7E54D29012BB8008DC467 /* ViewController.swift in Sources */,
 				44C7E54929012BB8008DC467 /* AppDelegate.swift in Sources */,
 				44C7E54B29012BB8008DC467 /* SceneDelegate.swift in Sources */,
+				44C7E55E29012D9C008DC467 /* MemoryItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
