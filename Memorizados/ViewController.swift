@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     private var memoryItems: [MemoryItem] = []
+    private let cellIdentifier = "CellIdentifier"
     var tableView = UITableView()
 
     override func viewDidLoad() {
@@ -23,14 +24,20 @@ class ViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
         
-        if let url = Bundle.main.url(forResource: "MemoryItems", withExtension: "json"),
+        self.memoryItems = getItems(from: "MemoryItems")
+    }
+    
+    func getItems(from fileName: String) -> [MemoryItem] {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: "json"),
            let data = try? Data(contentsOf: url),
            let memoryItems = try? JSONDecoder().decode([MemoryItem].self, from: data) {
-            self.memoryItems = memoryItems
+            return memoryItems
         }
+        return []
     }
 }
 
@@ -43,10 +50,15 @@ extension ViewController: UITableViewDelegate {
 // MARK: UITableViewDataSource
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return memoryItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell.init(style: .subtitle, reuseIdentifier: nil)
+        let cell = UITableViewCell (style: .subtitle, reuseIdentifier: cellIdentifier)
+        let item = memoryItems[indexPath.row]
+        cell.detailTextLabel?.text = item.text
+        cell.detailTextLabel?.numberOfLines = 0
+        cell.textLabel?.text = item.title
+        return cell
     }
 }
