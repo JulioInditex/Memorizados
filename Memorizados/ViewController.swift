@@ -58,7 +58,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell (style: .subtitle, reuseIdentifier: cellIdentifier)
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
         let item = memoryItems[indexPath.row]
         cell.detailTextLabel?.text = item.text
         cell.detailTextLabel?.numberOfLines = 0
