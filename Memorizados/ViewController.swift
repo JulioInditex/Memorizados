@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MemoryItemsRepository {
+    func getItems(from fileName: String) throws -> [MemoryItem]
+}
+
 class ViewController: UIViewController {
     private var memoryItems: [MemoryItem] = []
     private let cellIdentifier = "CellIdentifier"
@@ -28,16 +32,19 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        self.memoryItems = getItems(from: "MemoryItems")
+        self.memoryItems = (try? getItems(from: "MemoryItems")) ?? []
     }
-    
-    func getItems(from fileName: String) -> [MemoryItem] {
-        if let url = Bundle.main.url(forResource: fileName, withExtension: "json"),
-           let data = try? Data(contentsOf: url),
-           let memoryItems = try? JSONDecoder().decode([MemoryItem].self, from: data) {
-            return memoryItems
+}
+
+// MARK: MemoryItemsRepository
+extension ViewController: MemoryItemsRepository {
+    func getItems(from fileName: String) throws -> [MemoryItem] {
+        guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
+            return []
         }
-        return []
+        let data = try Data(contentsOf: url)
+        let memoryItems = try JSONDecoder().decode([MemoryItem].self, from: data)
+        return memoryItems
     }
 }
 

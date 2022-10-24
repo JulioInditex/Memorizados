@@ -20,25 +20,6 @@ class MemoryViewController: UIViewController {
     }
     private let textView = UITextView()
     private var blanksRevealed = Int.zero
-    private var itemSplitedBySpaces: [String] {
-        item?.text.split(separator: " ").map({ String($0) }) ?? []
-    }
-    private var textToShow: String {
-        guard blanksRevealed <= itemSplitedBySpaces.count else {
-            return ""
-        }
-        
-        var words: [String] = []
-        itemSplitedBySpaces.enumerated().forEach {
-            if $0.offset < blanksRevealed {
-                words.append($0.element)
-            } else {
-                words.append($0.element.map({ _ in "_" }).joined())
-            }
-        }
-        
-        return words.joined(separator: " ")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,12 +50,12 @@ class MemoryViewController: UIViewController {
         }
 
         self.title = memoryItem.title
-        textView.text = textToShow
+        textView.text = item?.textToShow(blanksRevealed: blanksRevealed) ?? ""
     }
     
     @objc
     func textViewTapped() {
-        guard blanksRevealed != itemSplitedBySpaces.count else {
+        guard blanksRevealed != item?.itemSplitedBySpaces.count else {
             return
         }
         

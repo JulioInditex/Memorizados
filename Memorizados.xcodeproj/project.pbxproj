@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4495C08F2906ADD6001EB866 /* MemorizadosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4495C08E2906ADD6001EB866 /* MemorizadosTests.swift */; };
+		4495C0952906BCD7001EB866 /* MemoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C7E55D29012D9C008DC467 /* MemoryItem.swift */; };
+		4495C0A52906C13A001EB866 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C7E54C29012BB8008DC467 /* ViewController.swift */; };
+		4495C0A62906C1D5001EB866 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C7E562290136F7008DC467 /* MemoryViewController.swift */; };
 		44C7E54929012BB8008DC467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C7E54829012BB8008DC467 /* AppDelegate.swift */; };
 		44C7E54B29012BB8008DC467 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C7E54A29012BB8008DC467 /* SceneDelegate.swift */; };
 		44C7E54D29012BB8008DC467 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C7E54C29012BB8008DC467 /* ViewController.swift */; };
@@ -18,7 +22,19 @@
 		44C7E563290136F7008DC467 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C7E562290136F7008DC467 /* MemoryViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4495C0902906ADD6001EB866 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44C7E53D29012BB8008DC467 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44C7E54429012BB8008DC467;
+			remoteInfo = Memorizados;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		4495C08C2906ADD6001EB866 /* MemorizadosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemorizadosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4495C08E2906ADD6001EB866 /* MemorizadosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizadosTests.swift; sourceTree = "<group>"; };
 		44C7E54529012BB8008DC467 /* Memorizados.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorizados.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C7E54829012BB8008DC467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44C7E54A29012BB8008DC467 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +49,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4495C0892906ADD6001EB866 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44C7E54229012BB8008DC467 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,10 +66,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4495C08D2906ADD6001EB866 /* MemorizadosTests */ = {
+			isa = PBXGroup;
+			children = (
+				4495C08E2906ADD6001EB866 /* MemorizadosTests.swift */,
+			);
+			path = MemorizadosTests;
+			sourceTree = "<group>";
+		};
 		44C7E53C29012BB8008DC467 = {
 			isa = PBXGroup;
 			children = (
 				44C7E54729012BB8008DC467 /* Memorizados */,
+				4495C08D2906ADD6001EB866 /* MemorizadosTests */,
 				44C7E54629012BB8008DC467 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				44C7E54529012BB8008DC467 /* Memorizados.app */,
+				4495C08C2906ADD6001EB866 /* MemorizadosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +128,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4495C08B2906ADD6001EB866 /* MemorizadosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4495C0942906ADD6001EB866 /* Build configuration list for PBXNativeTarget "MemorizadosTests" */;
+			buildPhases = (
+				4495C0882906ADD6001EB866 /* Sources */,
+				4495C0892906ADD6001EB866 /* Frameworks */,
+				4495C08A2906ADD6001EB866 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4495C0912906ADD6001EB866 /* PBXTargetDependency */,
+			);
+			name = MemorizadosTests;
+			productName = MemorizadosTests;
+			productReference = 4495C08C2906ADD6001EB866 /* MemorizadosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		44C7E54429012BB8008DC467 /* Memorizados */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44C7E55929012BB9008DC467 /* Build configuration list for PBXNativeTarget "Memorizados" */;
@@ -122,6 +173,10 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					4495C08B2906ADD6001EB866 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 44C7E54429012BB8008DC467;
+					};
 					44C7E54429012BB8008DC467 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -141,11 +196,19 @@
 			projectRoot = "";
 			targets = (
 				44C7E54429012BB8008DC467 /* Memorizados */,
+				4495C08B2906ADD6001EB866 /* MemorizadosTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4495C08A2906ADD6001EB866 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44C7E54329012BB8008DC467 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -160,6 +223,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4495C0882906ADD6001EB866 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4495C0A52906C13A001EB866 /* ViewController.swift in Sources */,
+				4495C0A62906C1D5001EB866 /* MemoryViewController.swift in Sources */,
+				4495C08F2906ADD6001EB866 /* MemorizadosTests.swift in Sources */,
+				4495C0952906BCD7001EB866 /* MemoryItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44C7E54129012BB8008DC467 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,6 +247,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4495C0912906ADD6001EB866 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44C7E54429012BB8008DC467 /* Memorizados */;
+			targetProxy = 4495C0902906ADD6001EB866 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		44C7E54E29012BB8008DC467 /* Main.storyboard */ = {
@@ -194,6 +276,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4495C0922906ADD6001EB866 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6RQH7N68XF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juliorl8.MemorizadosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Memorizados.app/Memorizados";
+			};
+			name = Debug;
+		};
+		4495C0932906ADD6001EB866 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6RQH7N68XF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juliorl8.MemorizadosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Memorizados.app/Memorizados";
+			};
+			name = Release;
+		};
 		44C7E55729012BB9008DC467 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -367,6 +485,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4495C0942906ADD6001EB866 /* Build configuration list for PBXNativeTarget "MemorizadosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4495C0922906ADD6001EB866 /* Debug */,
+				4495C0932906ADD6001EB866 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		44C7E54029012BB8008DC467 /* Build configuration list for PBXProject "Memorizados" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
