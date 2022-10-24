@@ -19,7 +19,7 @@ class MemoryViewController: UIViewController {
         }
     }
     private let textView = UITextView()
-    private var blanksRevealed = 0
+    private var blanksRevealed = Int.zero
     private var itemSplitedBySpaces: [String] {
         item?.text.split(separator: " ").map({ String($0) }) ?? []
     }

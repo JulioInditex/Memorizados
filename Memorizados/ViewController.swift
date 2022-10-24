@@ -61,7 +61,7 @@ extension ViewController: UITableViewDataSource {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
         let item = memoryItems[indexPath.row]
         cell.detailTextLabel?.text = item.text
-        cell.detailTextLabel?.numberOfLines = 0
+        cell.detailTextLabel?.numberOfLines = .zero
         cell.textLabel?.text = item.title
         return cell
     }
