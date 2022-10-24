@@ -58,6 +58,9 @@ class MemoryViewController: UIViewController {
         textView.isEditable = false
         textView.isSelectable = false
         textView.font = .systemFont(ofSize: 20)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(textViewTapped))
+        textView.addGestureRecognizer(tapGesture)
     }
     
     private func updateMemoryItemView() {
@@ -67,6 +70,16 @@ class MemoryViewController: UIViewController {
 
         self.title = memoryItem.title
         textView.text = textToShow
+    }
+    
+    @objc
+    func textViewTapped() {
+        guard blanksRevealed != itemSplitedBySpaces.count else {
+            return
+        }
+        
+        blanksRevealed += 1
+        updateMemoryItemView()
     }
 }
 
